@@ -11,9 +11,8 @@ class BombaGasolina(BombaCombustivel):
         return litros
     
     def abastecer_por_litro_com_aditivo(self, litros):
-        preco_aditivo = litros * 1,05
-        litros = valor * preco_aditivo
-        valor = litros * super().get_preco()
+        preco_aditivo = super().get_preco() * 1.05
+        valor = litros * preco_aditivo
         return valor
 
 
